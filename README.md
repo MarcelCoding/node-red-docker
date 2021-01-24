@@ -43,12 +43,12 @@ services:
     image: marcelcoding/node-red-docker:latest
     restart: always
     environment:
-      # - 'USERNAME=admin'           # <- NoVNC "Webinterface" Password (optional)
+    # - 'USERNAME=admin'           # <- NoVNC "Webinterface" Password (optional)
       - 'PASSWORD=SECURE_PASSWORD' # <- NoVNC Screen Resolution (optional, default: "admin")
     ports:
       - '1880:1880'                # <- Http Web Interface
     volumes:
-      - ./node-red-data:/data      # <-- Data Persistance
+      - ./node-red-data:/data      # <- Data Persistence
 ````
 
 ## License
