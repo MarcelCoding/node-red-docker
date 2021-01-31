@@ -8,7 +8,7 @@ on:
 
 env:
   IMAGE_NAME: marcelcoding/node-red-docker
-  DOCKER_PLATFORMS: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8,linux/s390x
+  DOCKER_PLATFORMS: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8,linux/s390x
 
 jobs:
   docker:
