@@ -6,7 +6,7 @@ RUN apk add --update --no-cache git \
  && git checkout 72d0f4b8d387f07d0cc624dcfc985f77dce0780f \
  && npm pack
 
-FROM nodered/node-red:1.2.7
+FROM nodered/node-red:1.2.9
 
 # TODO: https://flows.nodered.org/collection/c8156f6276976bfb518d1e60442e01e2
 # Treaefik: custom error pages, https://github.com/MarcelCoding/error-pages
