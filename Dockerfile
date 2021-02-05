@@ -1,4 +1,4 @@
-FROM node:14-alpine AS builder
+FROM node:15-alpine AS builder
 
 RUN apk add --update --no-cache git \
  && git clone https://github.com/alphawerk/node-red-contrib-postgrestor.git \
