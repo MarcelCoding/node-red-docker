@@ -62,6 +62,7 @@ RUN npm i node-red-dashboard \
           node-red-node-twitter \
           # node-red-node-discord @discordjs/uws \
           node-red-contrib-telegrambot \
+          node-red-contrib-debounce \
           @node-red-contrib-themes/solarized-dark-grey
 
 COPY settings.js /usr/src/node-red/settings.js
