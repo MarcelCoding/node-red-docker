@@ -2,7 +2,6 @@
 
 [![Releases](https://img.shields.io/github/v/tag/MarcelCoding/node-red-docker?label=latest%20version&style=flat-square)](https://github.com/marcelcoding/node-red-docker/releases)
 [![Build](https://img.shields.io/github/workflow/status/MarcelCoding/node-red-docker/CI?label=CI&style=flat-square)](https://github.com/marcelcoding/node-red-docker/actions)
-[![DockerHub](https://img.shields.io/docker/pulls/marcelcoding/node-red-docker?style=flat-square)](https://hub.docker.com/r/marcelcoding/node-red-docker)
 
 This is a docker container for [Node-RED](https://nodered.org/). It is based on the
 "official" [Node-RED Docker Image](https://github.com/node-red/node-red-docker/) but withe
@@ -12,12 +11,12 @@ a [dark theme](https://github.com/node-red-contrib-themes/solarized-dark-grey), 
 
 ## Deployment
 
-This image is available in [DockerHub](https://hub.docker.com/r/marcelcoding/node-red-docker) and the
-[GitHub Container Registry](https://github.com/users/MarcelCoding/packages/container/package/node-red-docker):
+This image is available in [DockerHub](https://hub.docker.com/r/marcelcoding/node-red) and the
+[GitHub Container Registry](https://github.com/users/MarcelCoding/packages/container/package/node-red):
 
 ```
-marcelcoding/node-red-docker:latest
-ghcr.io/marcelcoding/node-red-docker:latest
+marcelcoding/node-red:latest
+ghcr.io/marcelcoding/node-red:latest
 ```
 
 ### Docker "run" Command
@@ -29,7 +28,7 @@ docker run \
   --restart always \
   --rm \
   --mount "./node-red-data:/data"
-  marcelcoding/node-red-docker:latest
+  marcelcoding/node-red:latest
 ```
 
 ### Docker Compose
@@ -40,7 +39,7 @@ version: '3.8'
 
 services:
   node-red-docker:
-    image: marcelcoding/node-red-docker:latest
+    image: marcelcoding/node-red:latest
     restart: always
     environment:
     # - 'USERNAME=admin'           # <- NoVNC "Webinterface" Password (optional)
