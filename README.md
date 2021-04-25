@@ -26,7 +26,6 @@ docker run \
   -p 1880:1880 \
   -e PASSWORD=SECURE_PASSWORD \
   --restart always \
-  --rm \
   --mount "./node-red-data:/data"
   marcelcoding/node-red:latest
 ```
