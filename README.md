@@ -41,8 +41,8 @@ services:
     image: marcelcoding/node-red:latest
     restart: always
     environment:
-    # - 'USERNAME=admin'           # <- NoVNC "Webinterface" Password (optional)
-      - 'PASSWORD=SECURE_PASSWORD' # <- NoVNC Screen Resolution (optional, default: "admin")
+    # - 'USERNAME=admin'           # <- Webinterface username (optional, default: "admin")
+    # - 'PASSWORD=SECURE_PASSWORD' # <- Webinterface password (optional, default: "admin")
     ports:
       - '1880:1880'                # <- Http Web Interface
     volumes:
