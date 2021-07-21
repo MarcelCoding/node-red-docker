@@ -1,34 +1,21 @@
-var http = require('http');
-var https = require('https');
-var settings = require('/usr/src/node-red/settings.js');
-var request;
+const http = require('http');
+const https = require('https');
+const settings = require('/settings.js');
 
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
-var options = {
-  host : "localhost",
-  port : settings.uiPort || 1880,
-  timeout : 4000
-};
+const getHttp = () => settings.hasOwnProperty("https") ? https : http;
+const exitCode = response =>
+    response.statusCode >= 200 && response.statusCode < 500 ? 0 : 1;
 
-if (settings.hasOwnProperty("https")) {
-  request = https.request(options, (res) => {
-    //console.log(`STATUS: ${res.statusCode}`);
-    if ((res.statusCode >= 200) && (res.statusCode < 500)) { process.exit(0); }
-    else { process.exit(1); }
-  });
-}
-else {
-  request = http.request(options, (res) => {
-    //console.log(`STATUS: ${res.statusCode}`);
-    if ((res.statusCode >= 200) && (res.statusCode < 500)) { process.exit(0); }
-    else { process.exit(1); }
-  });
-}
+const request = getHttp().request(
+    {
+      host: "localhost",
+      port: settings.uiPort || 1880,
+      timeout: 4000
+    },
+    response => process.exit(exitCode(response))
+);
 
-request.on('error', function(err) {
-  //console.log('ERROR',err);
-  process.exit(1);
-});
-
+request.on('error', _ => process.exit(1));
 request.end();
