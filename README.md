@@ -7,7 +7,7 @@ This is a docker container for [Node-RED](https://nodered.org/). It is based on 
 "official" [Node-RED Docker Image](https://github.com/node-red/node-red-docker/) but withe
 the [Node-RED Dashboard](https://github.com/node-red/node-red-dashboard)
 and [addon](https://github.com/node-red/node-red-ui-nodes/) nodes,
-a [dark theme](https://github.com/node-red-contrib-themes/solarized-dark-grey), and some environment variables.
+a [dark theme](https://github.com/node-red-contrib-themes/dark), and some environment variables.
 
 ## Deployment
 
