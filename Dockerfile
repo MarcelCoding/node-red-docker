@@ -1,4 +1,4 @@
-FROM nodered/node-red:2.0.2
+FROM nodered/node-red:2.0.3
 
 # TODO: https://flows.nodered.org/collection/c8156f6276976bfb518d1e60442e01e2
 # Treaefik: custom error pages, https://github.com/MarcelCoding/error-pages
