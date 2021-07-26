@@ -3,16 +3,19 @@ FROM nodered/node-red:2.0.3
 # TODO: https://flows.nodered.org/collection/c8156f6276976bfb518d1e60442e01e2
 # Treaefik: custom error pages, https://github.com/MarcelCoding/error-pages
 
-          # ui nodes
-RUN npm i node-red-dashboard
-#          node-red-node-ui-iframe \
-#          node-red-node-ui-lineargauge \
-#          node-red-node-ui-list \
-#          node-red-node-ui-microphone \
-#          node-red-node-ui-table \
-#          node-red-node-ui-vega \
-#          node-red-node-ui-webcam \
-#          node-red-node-ui-microphone \
+          # https://github.com/node-red/node-red-dashboard
+RUN npm i node-red-dashboard \
+          # https://github.com/node-red/node-red-ui-nodes/
+          node-red-node-ui-iframe \
+          node-red-node-ui-lineargauge \
+          node-red-node-ui-list \
+          node-red-node-ui-microphone \
+          node-red-node-ui-table \
+          node-red-node-ui-vega \
+          node-red-node-ui-webcam \
+          # https://github.com/node-red-contrib-themes/dark
+          @node-red-contrib-themes/dark
+
 #          node-red-contrib-ui-media \
 #          node-red-contrib-ui-heatmap \
 #          node-red-contrib-ui-countdown-timer-switch \
